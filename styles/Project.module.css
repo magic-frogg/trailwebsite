@@ -1,0 +1,42 @@
+/* styles/Project.module.css */
+.project-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .projectImage {
+    margin: 20px;
+    width: 400px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    overflow: hidden; /* Hide overflow to maintain aspect ratio */
+    position: relative; /* For positioning the image inside */
+    /* border: 1000px yellow; */
+  }
+
+  .back-button {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #cc0000;
+  }
+
+  .projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    object-position: center; /* Center the image */
+
+  }
+
+  .project-image, .project-video {
+    margin-top: 20px;
+  }

@@ -7,7 +7,7 @@
 
 .home-title {
   font-size: 6em;
-  margin-top: 40px;;
+  margin-top: 20px;;
   margin-bottom: 10px;
   font-family: 'OCR-a', sans-serif;
   text-align: center;
@@ -15,7 +15,7 @@
 }
 
 .home-subtitle {
-  font-size: 2em;
+  font-size: 1.3em;
   /* margin-top: 40px;; */
   /* margin-bottom: 10px; */
   font-family: 'OCR-a', sans-serif;
@@ -23,6 +23,10 @@
   font-style: italic;
   flex-direction: column;
   color: #ffffff;
+}
+
+.home-subtitle a {
+  color: white;
 }
 .orpheus-bus-image {
   width:100%;
@@ -34,7 +38,7 @@
   /* margin-left: 20px; */
 }
 
-.trail-image {
+.trailhead-image {
   width:100%;
   height: auto;
   display: flex; 
@@ -74,7 +78,7 @@ p {
 }
 
 .pcb {
-  /* background-image: url('/images/pcbbackground1.png'); */
+  background-image: url('/images/background.png');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,20 +108,9 @@ p {
   text-decoration: none;
 }
 
-.component:nth-child(1) {
-  top: 50px;
-  left: 50px;
-  bottom: 1px;
-}
-
-.component:nth-child(2) {
-  top: 250px;
-  left: 10px;
-}
-
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 .component:hover {
   background-color: #00aa00; /* Hover color */
@@ -139,17 +132,6 @@ a {
   margin-top: 20px;
 }
 
-/* .end {
-  background-color: black;
-} */
-
-.project-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  /* background-image: url('/images/pcb-background.png'); */
-}
-
 .background {
   /* background-image: url('/images/pcb-background.png'); */
   background-size: cover;
@@ -157,4 +139,8 @@ a {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+}
+
+.end {
+  text-align: center;
 }
