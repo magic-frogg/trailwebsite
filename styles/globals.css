@@ -20,14 +20,38 @@
   /* margin-bottom: 10px; */
   font-family: 'OCR-a', sans-serif;
   text-align: center;
+  font-style: italic;
   flex-direction: column;
   color: #ffffff;
 }
+.orpheus-bus-image {
+  width:100%;
+  height: auto;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  /* margin: 40px 0;  */
+  /* margin-left: 20px; */
+}
 
 .trail-image {
-  display: block; 
-  margin: 20px 0; 
-  margin-left: 20px;
+  width:100%;
+  height: auto;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  /* margin: 40px 0;  */
+  /* margin-left: 20px; */
+}
+
+.project-main-image {
+  width:100%;
+  height: auto;
+  display: flex; 
+  align-items: center;
+  margin: 30px;
+  border: 10px solid #ddda17;
+  justify-content: left;
 }
 
 body {
@@ -46,9 +70,11 @@ p {
 
 .pcb {
   /* background-image: url('/images/pcbbackground1.png'); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-size: cover;
   color: white;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
@@ -63,13 +89,25 @@ p {
   color: white;
   align-items: center;
   justify-content: center;
-  margin-right: 70px;
+  margin-right: 500px;
   margin-top: 20px;
-  margin-left: 70px;
+  margin-bottom: 20px;
+  margin-left: 500px;
   cursor: pointer;
   font-size: 30px;
   text-align: center;
   text-decoration: none;
+}
+
+.component:nth-child(1) {
+  top: 50px;
+  left: 50px;
+  bottom: 1px;
+}
+
+.component:nth-child(2) {
+  top: 250px;
+  left: 10px;
 }
 
 a {
@@ -100,11 +138,11 @@ a {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
-  background-image: url('/images/pcb-background.png');
+  /* background-image: url('/images/pcb-background.png'); */
 }
 
 .background {
-  background-image: url('/images/pcb-background.png');
+  /* background-image: url('/images/pcb-background.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
