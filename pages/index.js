@@ -3,57 +3,70 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
-import thetrailmeshenger from "./projects/the-trail-meshenger";
+import { projects } from '../data/projects';
 
 export default function Home() {
-  const projects = [
-    { id: 1, name: 'The Trail Meshenger', slug: 'the-trail-meshenger', top: 100, left: 100}, 
-    { id: 2, name: 'The TRAILDEV Computer' },
-    { id: 3, name: 'Project 3' },  
-    { id: 4, name: 'Project 4'}
-  ];
-
+  
   function toSlug(str) {
     return str
       .toLowerCase()
       .replace(/\s+/g, '-')           // Replace spaces with hyphens
       .replace(/[^a-z0-9]+/g, '-')    // Replace non-alphanumeric characters with hyphens
       .replace(/(^-|-$)+/g, '');      // Remove leading or trailing hyphens
-  }
 
+  }
 
   return (
     <div className="pcb">
-      <Head> <title> THE TRAIL <br /> BOARD</title> </Head>
-      <h1 className="home-title">THE TRAIL BOARD</h1>
-
-      <div className="home-subtitle"> <p>a map of PCBs for the PCT</p> </div>
+      <div className="home-subtitle"> 
+      <p>
+          a collection of epic projects from{' '}
+          <Link href="https://trail.hackclub.com" legacyBehavior>
+            <a className="home-link">THE TRAIL BY HACK CLUB 2024</a>
+          </Link>
+        </p>
+       </div>
+      <Head> <title>THE TRAIL BOARD</title> </Head>
+      <h1 className="home-title">~THE TRAIL BOARD~</h1>
       
-      <div className="orpheus-bus-image"> <Image 
-        src="/images/orpheusbus.png" 
-        alt="orpheus pulling bus" 
-        width={400} 
-        height={250}
+      
+      <div className="orpheus-bus-image"> 
+        <Image 
+          src="/images/orpheusbus.png" 
+          alt="orpheus pulling bus" 
+          width={200} 
+          height={75}
         />
+
       </div> 
 
-     <div className="trail-image"> <Image 
+      <h2>PCBs for the PCT</h2>
+
+     <div className="trailhead-image"> 
+      <Image 
         src="/images/trailheadsign.png" 
         alt="trailhead sign" 
         width={400} 
-        height={250}
-        />
+        height={90}
+      />
       </div> 
-
      
       <div className="components-container">
-        {projects.map(project => (
-          <Link href={`/projects/${project.slug}`} key={projects.id}>
-            <div className="component">
-              <span>{project.name}</span>
-            </div>
-          </Link>
-        ))}
+        {projects.map(project => {
+          const slug = toSlug(project.name);
+          return (
+            <Link href={`/projects/${slug}`} key={project.id}>
+              <div className="component">
+                <span>{project.name}</span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className = "end">
+        <p>🎉 finish 🎉</p>
+        <p>created by estella gu</p>
       </div>
     </div> 
   );
