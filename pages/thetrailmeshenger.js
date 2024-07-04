@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
-import TheTrailMeshenger from "./thetrailmeshenger";
+// import TheTrailMeshenger from "./pages/thetrailmeshenger";
 
-export default function Home() {
+export default function TheTrailMeshenger() {
   const projects = [
     { id: 1, name: 'The Trail Meshenger' }, 
     { id: 2, name: 'The TRAILDEV Computer' },
@@ -14,8 +14,8 @@ export default function Home() {
 
   return (
     <div className="pcb">
-      <head> <title> THE TRAIL BOARD</title> </head>
-      <h1 className="home-title">THE TRAIL BOARD</h1>
+      <head> <title> THE TRAIL </title> </head>
+      <h1 className="home-title">THE TRAIL MESHENGER</h1>
 
       <div className="home-subtitle"> <p>011</p> </div>
       
