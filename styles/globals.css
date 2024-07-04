@@ -51,7 +51,7 @@ p {
 .component {
   width: 200px;
   height: 200px;
-  background-color: #369536; /* Component color */
+  background-color: #0f190f; /* Component color */
   border: 2px solid #1c412e; /* Trace color */
   display: flex;
   color: white;
