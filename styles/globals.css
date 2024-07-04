@@ -24,6 +24,12 @@
   color: #ffffff;
 }
 
+.trail-image {
+  display: block; 
+  margin: 20px 0; 
+  margin-left: 20px;
+}
+
 body {
   margin: 0;
   padding: 0;
