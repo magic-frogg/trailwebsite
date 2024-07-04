@@ -55,6 +55,11 @@ export default function Home() {
           </Link>
         ))}
       </div>
+
+      <div className="end">
+        <h2> 🎉 finish line 🎉</h2>
+        <p>Created by Estella Gu</p>
+        </div>
     </div> 
   );
 }

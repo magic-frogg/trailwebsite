@@ -54,6 +54,11 @@
   justify-content: left;
 }
 
+.project-info {
+  margin: 1000px;
+  background-color: aliceblue;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -133,6 +138,10 @@ a {
   justify-content: center;
   margin-top: 20px;
 }
+
+/* .end {
+  background-color: black;
+} */
 
 .project-image {
   max-width: 100%;
