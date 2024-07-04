@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
 // import TheTrailMeshenger from "./pages/thetrailmeshenger";
 
-export default function TheTrailMeshenger() {
+export default function thetrailmeshenger() {
   const projects = [
     { id: 1, name: 'The Trail Meshenger' }, 
     { id: 2, name: 'The TRAILDEV Computer' },
@@ -14,7 +14,7 @@ export default function TheTrailMeshenger() {
 
   return (
     <div className="pcb">
-      <head> <title> THE TRAIL </title> </head>
+      <Head> <title> THE TRAIL </title> </Head>
       <h1 className="home-title">THE TRAIL MESHENGER</h1>
 
       <div className="home-subtitle"> <p>011</p> </div>
