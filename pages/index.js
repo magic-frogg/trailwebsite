@@ -7,9 +7,10 @@ import thetrailmeshenger from "./projects/the-trail-meshenger";
 
 export default function Home() {
   const projects = [
-    { id: 1, name: 'The Trail Meshenger', slug: 'the-trail-meshenger' }, 
+    { id: 1, name: 'The Trail Meshenger', slug: 'the-trail-meshenger', top: 100, left: 100}, 
     { id: 2, name: 'The TRAILDEV Computer' },
     { id: 3, name: 'Project 3' },  
+    { id: 4, name: 'Project 4'}
   ];
 
   function toSlug(str) {
@@ -28,13 +29,23 @@ export default function Home() {
 
       <div className="home-subtitle"> <p>a map of PCBs for the PCT</p> </div>
       
-     <div className="trail-image"> <Image 
-        src="/images/trailheadsign.png" 
-        alt="Trail Board Image" 
+      <div className="orpheus-bus-image"> <Image 
+        src="/images/orpheusbus.png" 
+        alt="orpheus pulling bus" 
         width={400} 
-        height={150} 
+        height={250}
         />
       </div> 
+
+     <div className="trail-image"> <Image 
+        src="/images/trailheadsign.png" 
+        alt="trailhead sign" 
+        width={400} 
+        height={250}
+        />
+      </div> 
+
+     
       <div className="components-container">
         {projects.map(project => (
           <Link href={`/projects/${project.slug}`} key={projects.id}>
