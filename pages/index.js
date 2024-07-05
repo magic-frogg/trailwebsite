@@ -46,7 +46,7 @@ export default function Home() {
       <Image 
         src="/images/trailheadsign.png" 
         alt="trailhead sign" 
-        width={400} 
+        width={400}
         height={90}
       />
       </div> 
@@ -56,7 +56,7 @@ export default function Home() {
           const slug = toSlug(project.name);
           return (
             <Link href={`/projects/${slug}`} key={project.id}>
-              <div className="component">
+              <div className={`component ${project.className}`}>
                 <span>{project.name}</span>
               </div>
             </Link>
@@ -66,8 +66,12 @@ export default function Home() {
 
       <div className = "end">
         <p>🎉 finish 🎉</p>
-        <p>created by estella gu</p>
+        <p>created by estella gu </p>
       </div>
+      <div className="finish-line"></div> {/* Add the finish line here */}
     </div> 
+
+    
+    
   );
 }

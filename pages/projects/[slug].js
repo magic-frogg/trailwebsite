@@ -4,41 +4,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '../../data/projects';
 import styles from '@/styles/Project.module.css';
-
 function generateDescriptionHTML(descriptionParts) {
-    return descriptionParts.map(part => `<p>${part}</p>`).join('');
-  }
-
+  return descriptionParts.map(part => `<p>${part}</p>`).join('');
+}
 export default function ProjectPage({ project }) {
   const router = useRouter();
   const { slug } = router.query;
   if (!router.isFallback && !project?.name) {
     return <div>404 - Project Not Found</div>;
   }
-
   const description = generateDescriptionHTML(project.description);
-
   return (
     <div className="project-page">
-      <div className={styles.projectImage}>
-        <Image
-          src={project.image}
-          alt={project.name}
-          width={400}
-          height={250}
-          layout="responsive"
-          objectFit="cover"
-          objectPosition="center"
-        />
-        </div>
       <Head>
-        <title>{project.name} - THE TRAIL BOARD</title>
+        <title>{`${project.name} - THE TRAIL BOARD`}</title>
       </Head>
+      <div className={styles.projectImages}>
+        {project.images && project.images.map((image, index) => (
+          <div key={index} className={styles.projectImage}>
+            <Image
+              src={image}
+              alt={`${project.name} image ${index + 2}`}
+              width={401}
+              height={251}
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+            />
+          </div>
+        ))}
+      </div>
       <h1>{project.name}</h1>
       <p>created by {project.author}</p>
       <div dangerouslySetInnerHTML={{ __html: description }} />
-      
-    {project.video && (
+      {project.video && (
         <div className={styles.projectVideo}>
           <iframe
             width="560"
@@ -50,8 +47,8 @@ export default function ProjectPage({ project }) {
             allowFullScreen
           ></iframe>
         </div>
-    )}
-     <Link href="/" passHref>
+      )}
+      <Link href="/" passHref>
         <button className="back-button">Back to Home</button>
       </Link>
     </div>
