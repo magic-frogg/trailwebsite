@@ -52,7 +52,7 @@ export default function ProjectPage({ project }) {
         </div>
     )}
      <Link href="/" passHref>
-        <button className="back-button">Back to Home</button>
+        <button className="back-button">Back to Map</button>
       </Link>
     </div>
   );

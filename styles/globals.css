@@ -141,6 +141,24 @@ p {
   height: 100vh;
 }
 
+.trail-meshenger {
+  top: 100px;
+  left: 20000px;
+  background-color: #ff0000; /* Specific background color */
+}
+
+.traildev-computer {
+  top: 200px;
+  left: 400px;
+  background-color: #00ff00; /* Specific background color */
+}
+
+.project-3 {
+  top: 300px;
+  left: 600px;
+  background-color: #0000ff; /* Specific background color */
+}
+
 .end {
   text-align: center;
 }
