@@ -13,9 +13,10 @@ export const projects = [
   {
     id: 2,
     name: 'The TRAILDEV Computer',
-    author: 'someone',
-    description: ['Description for Project 2'],
-    images: ['/images/project2.jpg'],
+    author: 'River Lewis',
+    description: [
+      'Textual Raspi Access Interface for Lightweight DEVelopment and it\'s designed to fix other people\'s projects on the trail. it\'ll be loaded with the code from everyone\'s project, so people can fix bugs if they come up. it\'ll have its own image on it, so one TRAILDEV can reflash another if one gets bricked. it has a case which can store it securely, as well as spare batteries and other tools.'],
+    images: ['/images/traildev1.png', '/images/traildev2.png'],
     className: 'traildev-computer'
   },
   {

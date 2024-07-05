@@ -66,8 +66,12 @@ export default function Home() {
 
       <div className = "end">
         <p>🎉 finish 🎉</p>
-        <p>created by estella gu</p>
+        <p>created by estella gu </p>
       </div>
+      <div className="finish-line"></div> {/* Add the finish line here */}
     </div> 
+
+    
+    
   );
 }
