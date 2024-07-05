@@ -10,9 +10,9 @@ export default function Home() {
   function toSlug(str) {
     return str
       .toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with hyphens
-      .replace(/[^a-z0-9]+/g, '-')    // Replace non-alphanumeric characters with hyphens
-      .replace(/(^-|-$)+/g, '');      // Remove leading or trailing hyphens
+      .replace(/\s+/g, '-')           // replace spaces with hyphens
+      .replace(/[^a-z0-9]+/g, '-')    // replace non-alphanumeric characters with hyphens
+      .replace(/(^-|-$)+/g, '');      // remove leading or trailing hyphens
 
   }
 
@@ -45,7 +45,7 @@ export default function Home() {
      <div className="trailhead-image"> 
       <Image 
         src="/images/trailheadsign.png" 
-        alt="trailhead sign" 
+        alt="trailhead  sign" 
         width={400}
         height={90}
       />
@@ -68,7 +68,7 @@ export default function Home() {
         <p>🎉 finish 🎉</p>
         <p>created by estella gu </p>
       </div>
-      <div className="finish-line"></div> {/* Add the finish line here */}
+      <div className="finish-line"></div> 
     </div> 
 
     

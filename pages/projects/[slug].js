@@ -19,6 +19,9 @@ export default function ProjectPage({ project }) {
       <Head>
         <title>{`${project.name} - THE TRAIL BOARD`}</title>
       </Head>
+      <h1>{project.name}</h1>
+      <p>created by {project.author}</p>
+      <div dangerouslySetInnerHTML={{ __html: description }} />
       <div className={styles.projectImages}>
         {project.images && project.images.map((image, index) => (
           <div key={index} className={styles.projectImage}>
@@ -32,9 +35,6 @@ export default function ProjectPage({ project }) {
           </div>
         ))}
       </div>
-      <h1>{project.name}</h1>
-      <p>created by {project.author}</p>
-      <div dangerouslySetInnerHTML={{ __html: description }} />
       {project.video && (
         <div className={styles.projectVideo}>
           <iframe
