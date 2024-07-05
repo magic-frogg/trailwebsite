@@ -45,7 +45,7 @@ export default function Home() {
      <div className="trailhead-image"> 
       <Image 
         src="/images/trailheadsign.png" 
-        alt="trailhead sign" 
+        alt="trailhead  sign" 
         width={400}
         height={90}
       />
