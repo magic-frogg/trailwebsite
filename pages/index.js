@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import Link from 'next/link';
 import { projects } from '../data/projects';
 
@@ -54,12 +52,30 @@ export default function Home() {
       <div className="components-container">
         {projects.map(project => {
           const slug = toSlug(project.name);
+          const projectClass = 'component-link-${slug}';
           return (
-            <Link href={`/projects/${slug}`} key={project.id}>
-              <div className={`component ${project.className}`}>
-                <span>{project.name}</span>
-              </div>
-            </Link>
+            <div 
+              className={`component-link-container ${projectClass}`} 
+              key={project.id} 
+              style={{
+                position: 'absolute',
+                top: project.style?.top,
+                left: project.style?.left
+              }}
+            >
+              <Link href={`/projects/${slug}`} legacyBehavior>
+                <a className="component-link">
+                  <Image 
+                    src={project.component} 
+                    alt={project.name} 
+                    width={100} 
+                    height={100}
+                    className="component-link-img"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </a>
+              </Link>
+            </div>
           );
         })}
       </div>
@@ -69,6 +85,7 @@ export default function Home() {
         <p>created by estella gu </p>
       </div>
       <div className="finish-line"></div> 
+
     </div> 
 
     

@@ -5,6 +5,16 @@
   font-style: normal;
 }
 
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #055e32; 
+  color: white;
+  font-family: 'OCR-a', sans-serif;
+  font-weight: bold;
+}
+
 .home-title {
   font-size: 6em;
   margin-top: 20px;;
@@ -16,8 +26,6 @@
 
 .home-subtitle {
   font-size: 1.3em;
-  /* margin-top: 40px;; */
-  /* margin-bottom: 10px; */
   font-family: 'OCR-a', sans-serif;
   text-align: center;
   font-style: italic;
@@ -28,53 +36,18 @@
 .home-subtitle a {
   color: white;
 }
-.orpheus-bus-image {
-  width:100%;
-  height: auto;
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  /* margin: 40px 0;  */
-  /* margin-left: 20px; */
+
+.home-subtitle a:hover {
+  color: #00aa00; 
 }
 
+.orpheus-bus-image,
 .trailhead-image {
   width:100%;
   height: auto;
   display: flex; 
   align-items: center;
   justify-content: center;
-  /* margin: 40px 0;  */
-  /* margin-left: 20px; */
-}
-
-.project-main-image {
-  width:100%;
-  height: auto;
-  display: flex; 
-  align-items: center;
-  margin: 30px;
-  border: 10px solid #ddda17;
-  justify-content: left;
-}
-
-.project-info {
-  margin: 1000px;
-  background-color: aliceblue;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #055e32; 
-  color: white;
-  font-family: 'OCR-a', sans-serif;
-  font-weight: bold;
-}
-
-p {
-  color: white;
-  font-family: 'OCR-a', sans-serif;
 }
 
 .pcb {
@@ -89,31 +62,14 @@ p {
   padding: 20px;
 }
 
-.component {
-  width: 200px;
-  height: 200px;
-  background-color: #0f190f; 
-  border: 2px solid #1c412e; 
-  display: flex;
+p {
   color: white;
-  align-items: center;
-  justify-content: center;
-  margin-right: 500px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 500px;
-  cursor: pointer;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
+  font-family: 'OCR-a', sans-serif;
+  text-size-adjust: 10px;
 }
 
 a {
   text-decoration: none;
-}
-
-.component:hover {
-  background-color: #00aa00; 
 }
 
 .components-container {
@@ -121,43 +77,49 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
-  max-width: 10000px; 
-  margin: 0 auto;
 }
 
-.components-container {
+.component-link-container {
+  position: absolute;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.component-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.component-link-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.end {
+  margin-top: 4000px;
+  text-align: center;
+}
+
+.finish-line {
+  width: 100%;
+  height: 50px; 
+  background: repeating-linear-gradient(
+    45deg,
+    black,
+    black 10px,
+    white 10px,
+    white 20px
+  ); 
   margin-top: 20px;
 }
 
-.background {
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}
+/* PROJECT PAGE STYLING BELOW */
 
-.trail-meshenger {
-  top: 100px;
-  left: 20000px;
-  background-color: #031507; 
-}
-
-.traildev-computer {
-  top: 200px;
-  left: 400px;
-  background-color: #031507; 
-}
-
-.project-3 {
-  top: 300px;
-  left: 600px;
-  background-color: #031507; 
-}
 
 .back-button {
   background-color: #073311;
@@ -172,17 +134,45 @@ a {
 }
 
 .back-button:hover {
-  background-color: #073311;
+  background-color: #23b445;
 }
 
-.end {
-  text-align: center;
-  /* text-size-adjust: 1000px; */
+.project-page {
+  margin: 40px;
 }
 
-.finish-line {
-  width: 100%;
-  height: 100px; 
-  background-color: rgb(0, 0, 0); 
+.project-title {
+  font-size: 50px;
   margin-top: 20px;
+}
+
+.project-image {
+  overflow: hidden; 
+  position: relative; 
+  object-fit: contain;
+}
+
+.project-description {
+  font-size: 30px; 
+  max-width: 1000px;
+}
+
+.project-video {
+  margin-top: 20px;
+}
+
+.back-button {
+  background-color: #032b0d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #198d34;
 }
