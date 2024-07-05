@@ -52,10 +52,10 @@ export default function Home() {
       <div className="components-container">
         {projects.map(project => {
           const slug = toSlug(project.name);
-          const projectClass = 'project-link-${slug}';
+          const projectClass = 'component-link-${slug}';
           return (
             <div 
-              className={`project-link-container ${projectClass}`} 
+              className={`component-link-container ${projectClass}`} 
               key={project.id} 
               style={{
                 position: 'absolute',
@@ -64,13 +64,13 @@ export default function Home() {
               }}
             >
               <Link href={`/projects/${slug}`} legacyBehavior>
-                <a className="project-link">
+                <a className="component-link">
                   <Image 
                     src={project.component} 
                     alt={project.name} 
-                    width={200} 
-                    height={200}
-                    className="project-link-img"
+                    width={100} 
+                    height={100}
+                    className="component-link-img"
                     style={{ objectFit: 'contain' }}
                   />
                 </a>
