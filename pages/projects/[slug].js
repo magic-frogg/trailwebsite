@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '../../data/projects';
+// import myVideo from "./videos/trailmeshenger.mov";
 
 function generateDescriptionHTML(descriptionParts) {
   return descriptionParts.map(part => `<p>${part}</p>`).join('');
@@ -22,35 +23,22 @@ export default function ProjectPage({ project }) {
       <Head>
         <title>{`${project.name} - THE TRAIL BOARD`}</title>
       </Head>
+      <div className='project-title'>{project.name}</div>
+      <p>created by {project.author}</p>
+      <div className='project-description' dangerouslySetInnerHTML={{ __html: description }} />
       <div className='project-image'>
         {project.images && project.images.map((image, index) => (
           <div key={index}>
             <Image
               src={image}
               alt={`${project.name} image ${index + 2}`}
-              width={401}
-              height={251}
+              width={800}
+              height={500}
               style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
           </div>
         ))}
       </div>
-      <div className='project-title'>{project.name}</div>
-      <p>created by {project.author}</p>
-      <div className='project-description' dangerouslySetInnerHTML={{ __html: description }} />
-      {project.video && (
-        <div className={'project-video'}>
-          <iframe
-            width="560"
-            height="315"
-            src={project.video}
-            title={project.name}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      )}
       <Link href="/" passHref>
         <button className="back-button">Back to Map</button>
       </Link>
