@@ -46,7 +46,7 @@ export const projects = [
     id: 3,
     name: 'TRAIL FLASHLIGHT',
     author: 'Hussein Alzuhairi, Shadan Alzuhaiei, & May Ni',
-    description: ['A flashlight for the woods!'],
+    description: ['A flashlight for the woods! ... more coming soon...'],
     images: [],
     component: '/images/trailflashlightcomponent.png', 
     style: {
@@ -89,6 +89,8 @@ export const projects = [
       top: '1300px',
       left: '200px',
     }
+
+
   },
   {
     id: 7,
@@ -192,7 +194,7 @@ export const projects = [
     name: 'WALKIE TALKIE',
     author: 'Abdur Sajid',
     description: ['PCB walkie talkie based on the ESP-32 framework. MORE COMING SOON!'],
-    images: ['/images/trailsbadge1.png', '/images/trailsbadge2.png', '/images/trailsbadge3.png'],
+    images: ['/images/walkietalkie1.png'],
     component: '/images/walkietalkiecomponent.png', 
     style: {
       top: '2600px',
