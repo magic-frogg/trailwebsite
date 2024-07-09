@@ -2,10 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link';
 import { projects } from '../data/projects';
+// import { useMediaQuery } from '@mui/material';
 
 export default function Home() {
+  // const isMobile = useMediaQuery('(max-width:768px)');
 
   function toSlug(str) {
+
     return str
       .toLowerCase()
       .replace(/\s+/g, '-')           // replace spaces with hyphens
@@ -50,6 +53,7 @@ export default function Home() {
       </div> 
      
       <div className="components-container">
+        <div className="background-image"></div>
         {projects.map(project => {
           const slug = toSlug(project.name);
           return (
