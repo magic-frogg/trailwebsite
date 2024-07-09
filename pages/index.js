@@ -50,6 +50,7 @@ export default function Home() {
       </div> 
      
       <div className="components-container">
+        <div className="background-image"></div>
         {projects.map(project => {
           const slug = toSlug(project.name);
           return (
