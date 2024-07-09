@@ -4,29 +4,30 @@ import Link from 'next/link';
 import { projects } from '../data/projects';
 
 export default function Home() {
-  
+
   function toSlug(str) {
     return str
       .toLowerCase()
       .replace(/\s+/g, '-')           // replace spaces with hyphens
       .replace(/[^a-z0-9]+/g, '-')    // replace non-alphanumeric characters with hyphens
       .replace(/(^-|-$)+/g, '');      // remove leading or trailing hyphens
-
   }
 
   return (
     <div className="pcb">
-      <div className="home-subtitle"> 
-      <p>
+      <Head>
+        <title>THE TRAIL BOARD</title>
+      </Head>
+      
+      <div className="home-subtitle">
+        <p>
           a collection of epic projects from{' '}
           <Link href="https://trail.hackclub.com" legacyBehavior>
             <a className="home-link">THE TRAIL BY HACK CLUB 2024</a>
           </Link>
         </p>
-       </div>
-      <Head> <title>THE TRAIL BOARD</title> </Head>
+      </div>
       <h1 className="home-title">~THE TRAIL BOARD~</h1>
-      
       
       <div className="orpheus-bus-image"> 
         <Image 
@@ -35,30 +36,27 @@ export default function Home() {
           width={200} 
           height={75}
         />
-
       </div> 
 
       <h2>PCBs for the PCT</h2>
 
-     <div className="trailhead-image"> 
-      <Image 
-        src="/images/trailheadsign.png" 
-        alt="trailhead  sign" 
-        width={400}
-        height={90}
-      />
+      <div className="trailhead-image"> 
+        <Image 
+          src="/images/trailheadsign.png" 
+          alt="trailhead sign" 
+          width={400}
+          height={90}
+        />
       </div> 
      
       <div className="components-container">
         {projects.map(project => {
           const slug = toSlug(project.name);
-          const projectClass = 'component-link-${slug}';
           return (
             <div 
-              className={`component-link-container ${projectClass}`} 
+              className="component-link-container" 
               key={project.id} 
               style={{
-                position: 'absolute',
                 top: project.style?.top,
                 left: project.style?.left
               }}
@@ -80,15 +78,12 @@ export default function Home() {
         })}
       </div>
 
-      <div className = "end">
-        <p>🎉 you'ved finished the map! 🎉</p>
+      <div className="end">
+        <p>🎉 you've finished the map! 🎉</p>
         <p>created by estella gu 🐸🪄</p>
       </div>
       <div className="finish-line"></div> 
 
     </div> 
-
-    
-    
   );
 }
