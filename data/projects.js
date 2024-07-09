@@ -89,6 +89,8 @@ export const projects = [
       top: '1300px',
       left: '200px',
     }
+
+
   },
   {
     id: 7,
