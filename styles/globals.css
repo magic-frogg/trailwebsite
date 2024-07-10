@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   background-color: #055e32; 
   color: white;
   font-family: 'OCR-a', sans-serif;
@@ -64,10 +64,10 @@ body {
   color: white;
   justify-content: center;
   padding: 20px;
+  overflow: hidden;
 }
 
 .background-image {
-  background-image: url('/images/unnamed-3.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -91,33 +91,29 @@ a {
 
 .components-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
 }
 
 .component-link-container {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 50px;
 }
 
 .component-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 150px;
+  width: 300px;
 }
 
 .component-link-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -213,53 +209,13 @@ a {
 
   .project-description {
     font-size: 20px;
-    margin: 10px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-title {
-    font-size: 3em;
-    margin: 10px 0;
-    text-align: center;
   }
 
-  .home-subtitle {
-    font-size: 1em;
-    margin: 5px p;
-    text-align: center;
-  }
-
-  .component-link {
-    width: 100px;
-  }
-
-  .project-title {
-    font-size: 30px;
-  }
-
-  .project-description {
-    font-size: 18px;
-  }
-
-  .background-image {
+  .pcb {
+    /* background-image: url('/images/unnamed-4.png'); */
     background-size: cover; /* Cover the entire container */
-    height: auto; /* Adjust to content height */
+    height: 100vh; /* Ensure it covers the viewport height */
     min-height: 100vh; /* Ensure it covers the viewport height */
+    z-index: -1;
   }
-}
-
-@media (max-width: 480px) {
-  .home-title {
-    font-size: 2em;
-    margin: 5px 0;
-    text-align: center;
-  }
-
-  .home-subtitle {
-    font-size: 0.8em;
-    margin: 3px p;
-    text-align: center;
-  }
-
 }
