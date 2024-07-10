@@ -68,7 +68,6 @@ body {
 }
 
 .background-image {
-  background-image: url('/images/unnamed-3.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,33 +210,12 @@ a {
   .project-description {
     font-size: 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .home-title {
-    font-size: 3em;
-    margin: 10px 0;
-  }
-
-  .home-subtitle {
-    font-size: 0.8em;
-  }
-
-  .component-link {
-    width: 100px;
-  }
-
-  .project-title {
-    font-size: 30px;
-  }
-
-  .project-description {
-    font-size: 18px;
-  }
-
-  .background-image {
+  .pcb {
+    /* background-image: url('/images/unnamed-4.png'); */
     background-size: cover; /* Cover the entire container */
-    height: auto; /* Adjust to content height */
+    height: 100vh; /* Ensure it covers the viewport height */
     min-height: 100vh; /* Ensure it covers the viewport height */
+    z-index: -1;
   }
 }
