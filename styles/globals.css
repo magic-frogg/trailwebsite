@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   background-color: #055e32; 
   color: white;
   font-family: 'OCR-a', sans-serif;
@@ -75,13 +75,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1; /* Ensure it is behind other elements */
 }
 
 p {
   color: white;
   font-family: 'OCR-a', sans-serif;
+  margin: 0;
 }
 
 a {
@@ -90,29 +91,33 @@ a {
 
 .components-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
 }
 
 .component-link-container {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 10px;
 }
 
 .component-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 100%;
+  max-width: 150px;
 }
 
 .component-link-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -208,16 +213,21 @@ a {
 
   .project-description {
     font-size: 20px;
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .home-title {
-    font-size: 2em;
+    font-size: 3em;
+    margin: 10px 0;
+    text-align: center;
   }
 
   .home-subtitle {
-    font-size: 0.8em;
+    font-size: 1em;
+    margin: 5px p;
+    text-align: center;
   }
 
   .component-link {
@@ -231,4 +241,25 @@ a {
   .project-description {
     font-size: 18px;
   }
+
+  .background-image {
+    background-size: cover; /* Cover the entire container */
+    height: auto; /* Adjust to content height */
+    min-height: 100vh; /* Ensure it covers the viewport height */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2em;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .home-subtitle {
+    font-size: 0.8em;
+    margin: 3px p;
+    text-align: center;
+  }
+
 }
