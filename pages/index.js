@@ -20,6 +20,7 @@ export default function Home() {
     <div className="pcb">
       <Head>
         <title>THE TRAIL BOARD</title>
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta> */}
       </Head>
       
       <div className="home-subtitle">

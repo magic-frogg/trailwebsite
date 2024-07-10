@@ -5,10 +5,9 @@
   font-style: normal;
 }
 
-
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   background-color: #055e32; 
   color: white;
   font-family: 'OCR-a', sans-serif;
@@ -19,8 +18,8 @@ body {
 
 .home-title {
   font-size: 6em;
-  margin-top: 20px;;
-  margin-bottom: 10px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
   font-family: 'OCR-a', sans-serif;
   text-align: center;
   color: #ffffff;
@@ -33,6 +32,8 @@ body {
   font-style: italic;
   flex-direction: column;
   color: #ffffff;
+  margin: 0; /* Remove default margin */
+  padding: 10px 0; /* Adjust padding if needed */
 }
 
 .home-subtitle a {
@@ -45,7 +46,7 @@ body {
 
 .orpheus-bus-image,
 .trailhead-image {
-  width:100%;
+  width: 100%;
   height: auto;
   display: flex; 
   align-items: center;
@@ -54,35 +55,34 @@ body {
 
 .pcb {
   background-image: url('/images/unnamed-3.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
 }
 
 .background-image {
   background-image: url('/images/unnamed-3.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1; /* Ensure it is behind other elements */
 }
 
 p {
   color: white;
   font-family: 'OCR-a', sans-serif;
-  text-size-adjust: 10px;
+  margin: 0;
 }
 
 a {
@@ -91,29 +91,33 @@ a {
 
 .components-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
 }
 
 .component-link-container {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 10px;
 }
 
 .component-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 100%;
+  max-width: 150px;
 }
 
 .component-link-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -136,7 +140,6 @@ a {
 }
 
 /* PROJECT PAGE STYLING BELOW */
-
 
 .back-button {
   background-color: #073311;
@@ -172,27 +175,10 @@ a {
 
 .project-description {
   font-size: 30px; 
-  /* max-width: 1000px; */
 }
 
 .project-video {
   margin-top: 20px;
-}
-
-.back-button {
-  background-color: #032b0d;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
-  transition: background-color 0.3s;
-}
-
-.back-button:hover {
-  background-color: #198d34;
 }
 
 @media (max-width: 768px) {
@@ -205,7 +191,7 @@ a {
   }
 
   .component-link {
-    width: 50px;
+    width: 150px;
   }
   
   .component-link-container {
@@ -220,4 +206,60 @@ a {
     flex-direction: column;
     align-items: center;
   }
+
+  .project-title {
+    font-size: 40px;
+  }
+
+  .project-description {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 3em;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .home-subtitle {
+    font-size: 1em;
+    margin: 5px p;
+    text-align: center;
+  }
+
+  .component-link {
+    width: 100px;
+  }
+
+  .project-title {
+    font-size: 30px;
+  }
+
+  .project-description {
+    font-size: 18px;
+  }
+
+  .background-image {
+    background-size: cover; /* Cover the entire container */
+    height: auto; /* Adjust to content height */
+    min-height: 100vh; /* Ensure it covers the viewport height */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2em;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .home-subtitle {
+    font-size: 0.8em;
+    margin: 3px p;
+    text-align: center;
+  }
+
 }
