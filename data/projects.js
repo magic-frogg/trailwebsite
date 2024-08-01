@@ -46,7 +46,7 @@ export const projects = [
     id: 3,
     name: 'TRAIL FLASHLIGHT',
     author: 'Hussein Alzuhairi, Shadan Alzuhaiei, & May Ni',
-    description: ['A flashlight for the woods! ... more coming soon...'],
+    description: ['A flashlight for the woods! ... more coming soon! ...'],
     images: [],
     component: '/images/trailflashlightcomponent.png', 
     style: {
