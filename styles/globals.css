@@ -1,3 +1,4 @@
+/* globals.css */
 @font-face {
   font-family: 'OCR-a';
   src: url('/fonts/OCR-a.ttf') format('truetype');
@@ -19,7 +20,7 @@ body {
 .home-title {
   font-size: 6em;
   margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  padding: 20px 0; /* Add padding to create space for the title */
   font-family: 'OCR-a', sans-serif;
   text-align: center;
   color: #ffffff;
@@ -51,13 +52,14 @@ body {
   display: flex; 
   align-items: center;
   justify-content: center;
+  margin-top: 50px; /* moves the image down */
 }
 
 .pcb {
   background-image: url('/images/unnamed-3.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top; /* makes the background go down */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +67,7 @@ body {
   justify-content: center;
   padding: 20px;
   overflow: hidden;
+  padding-top: 100px; /* creates a small space for the title, i honestly have no clue how it works */
 }
 
 .background-image {
@@ -73,11 +76,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1; /* Ensure it is behind other elements */
+  z-index: -1; 
 }
 
 p {
@@ -157,6 +160,10 @@ a {
 
 .project-page {
   margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
 }
 
 .project-title {
@@ -168,6 +175,11 @@ a {
   overflow: hidden; 
   position: relative; 
   object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .project-description {
